@@ -28,7 +28,7 @@ const showPlayerData =(players)=>{
             <p class="card-text">${strNationality}</p>
         <div>
         <button onclick="singlePlayer( '${idPlayer}')" type="button" class="btn btn-success">Details</button>
-        <button type="button" class="btn btn-success">Info</button>
+        <button type="button" class="btn btn-success">Remove</button>
         </div>
           </div>
         </div> `
@@ -51,6 +51,8 @@ const showSinglePlayer = (data)=>{
   const {strThumb,strPlayer,strNationality }= data
   const container =document.getElementById('single-player-data')
   const div =document.createElement('div')
+  const element =document.getElementById('make-remove');
+  element.classList.remove('d-none')
   div.innerHTML=`
   <div class="card mb-3" w-100 h-100">
   <div class="row g-0">
